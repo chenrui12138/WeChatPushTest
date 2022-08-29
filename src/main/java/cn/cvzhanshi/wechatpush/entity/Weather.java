@@ -30,4 +30,6 @@ public class Weather {
     String wind_class;
     // 风向
     String wind_dir;
+    //体感温度
+    String feels_like;
 }

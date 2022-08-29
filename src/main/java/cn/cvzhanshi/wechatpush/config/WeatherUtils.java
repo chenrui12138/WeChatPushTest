@@ -20,9 +20,9 @@ public class WeatherUtils {
     public static Weather getWeather(){
         RestTemplate restTemplate = new RestTemplate();
         Map<String,String> map = new HashMap<String,String>();
-        map.put("district_id","320583"); // 昆山行政代码
-        map.put("data_type","all");//这个是数据类型
-        map.put("ak","xx");
+        map.put("district_id","430621");
+        map.put("data_type","all");
+        map.put("ak","Z4k31H78xje2IeXgoDku3Vq77zGfgNpG");
         String res = restTemplate.getForObject(
                 "https://api.map.baidu.com/weather/v1/?district_id={district_id}&data_type={data_type}&ak={ak}",
                 String.class,
@@ -34,6 +34,7 @@ public class WeatherUtils {
         Weather weather = weathers.get(0);
         weather.setText_now(now.getString("text"));
         weather.setTemp(now.getString("temp"));
+        weather.setFeels_like(now.getString("feels_like"));
         weather.setWind_class(now.getString("wind_class"));
         weather.setWind_dir(now.getString("wind_dir"));
         return weather;
