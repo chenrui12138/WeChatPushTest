@@ -22,7 +22,7 @@ public class WeatherUtils {
         Map<String,String> map = new HashMap<String,String>();
         map.put("district_id","430621");
         map.put("data_type","all");
-        map.put("ak","Z4k31H78xje2IeXgoDku3Vq77zGfgNpG");
+        map.put("ak","xx");
         String res = restTemplate.getForObject(
                 "https://api.map.baidu.com/weather/v1/?district_id={district_id}&data_type={data_type}&ak={ak}",
                 String.class,
