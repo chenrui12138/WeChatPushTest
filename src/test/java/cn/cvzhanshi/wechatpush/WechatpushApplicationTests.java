@@ -10,7 +10,8 @@ class WechatpushApplicationTests {
 
     @Test
     void contextLoads() {
-        Pusher.push();
+//        Pusher.push();
+        Pusher.pushevening();
     }
 
 }
